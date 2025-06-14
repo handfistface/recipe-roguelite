@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f3;
+    color: #333;
+}
+#grocery-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+#grocery-list li {
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    margin: 10px 0;
+    padding: 5px; /* Reduced padding */
+    transition: all 1.0s ease;
+    cursor: pointer;
+}
+#grocery-list.collapsed {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when collapsed */
+}
+
+#grocery-list-header {
+    cursor: pointer;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    transition: background 1.0s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#grocery-list-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#grocery-list.collapsed + #grocery-list-header #grocery-list-arrow {
+    transform: rotate(-90deg); /* Rotate the arrow when collapsed */
+}
+#grocery-list li:hover {
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+td {
+    background: #f0f0f3;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    cursor: pointer;
+}
+#save-button {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+#save-button:hover {
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}

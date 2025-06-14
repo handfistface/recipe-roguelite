@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/meals.css">
+</head>
+<body>
+    {% include "toolbar.html" %}
+    <div id="meals-container">
+        <h1>Manage Meals</h1>
+        <form id="meal-form">
+            <input type="text" id="meal-name" placeholder="Meal Name" required>
+            <textarea id="meal-description" placeholder="Description"></textarea>
+            <button type="submit">Save Meal</button>
+        </form>
+        <div id="meals-list"></div>
+    </div>
+    <script src="/static/js/meals.js"></script>
+</body>
+</html>

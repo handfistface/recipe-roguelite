@@ -1,0 +1,523 @@
+{
+    "meals": [
+        {
+            "area": "Japanese",
+            "category": "Vegetarian",
+            "creativeCommonsConfirmed": null,
+            "dateModified": null,
+            "drinkAlternate": null,
+            "imageSource": null,
+            "ingredients": [
+                {
+                    "ingredient": "Udon Noodles",
+                    "measure": "250g"
+                },
+                {
+                    "ingredient": "Sesame Seed Oil",
+                    "measure": "2 tbs"
+                },
+                {
+                    "ingredient": "Onion",
+                    "measure": "1 sliced"
+                },
+                {
+                    "ingredient": "Cabbage",
+                    "measure": "0.25"
+                },
+                {
+                    "ingredient": "Shiitake Mushrooms",
+                    "measure": "10"
+                },
+                {
+                    "ingredient": "Spring Onions",
+                    "measure": "4"
+                },
+                {
+                    "ingredient": "Mirin",
+                    "measure": "4 tbsp"
+                },
+                {
+                    "ingredient": "Soy Sauce",
+                    "measure": "2 tbs"
+                },
+                {
+                    "ingredient": "Caster Sugar",
+                    "measure": "1 tblsp "
+                },
+                {
+                    "ingredient": "Worcestershire Sauce",
+                    "measure": "1 tblsp "
+                }
+            ],
+            "instructions": [
+                "Boil some water in a large saucepan. Add 250ml cold water and the udon noodles. (As they are so thick, adding cold water helps them to cook a little bit slower so the middle cooks through). If using frozen or fresh noodles, cook for 2 mins or until al dente; dried will take longer, about 5-6 mins. Drain and leave in the colander.",
+                "Heat 1 tbsp of the oil, add the onion and cabbage and saut\u00e9 for 5 mins until softened. Add the mushrooms and some spring onions, and saut\u00e9 for 1 more min. Pour in the remaining sesame oil and the noodles. If using cold noodles, let them heat through before adding the ingredients for the sauce \u2013 otherwise tip in straight away and keep stir-frying until sticky and piping hot. Sprinkle with the remaining spring onions."
+            ],
+            "meal": "Yaki Udon",
+            "mealId": "52871",
+            "mealThumb": "https://www.themealdb.com/images/media/meals/wrustq1511475474.jpg",
+            "source": "https://www.bbcgoodfood.com/recipes/yaki-udon",
+            "tags": "LowCalorie",
+            "youtube": "https://www.youtube.com/watch?v=5Iy0MCowSvA"
+        },
+        {
+            "area": "Canadian",
+            "category": "Dessert",
+            "creativeCommonsConfirmed": null,
+            "dateModified": null,
+            "drinkAlternate": null,
+            "imageSource": null,
+            "ingredients": [
+                {
+                    "ingredient": "Brown Sugar",
+                    "measure": "2 cups "
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "\u00bc cup"
+                },
+                {
+                    "ingredient": "Eggs",
+                    "measure": "2"
+                },
+                {
+                    "ingredient": "Vanilla Extract",
+                    "measure": "1 tsp "
+                },
+                {
+                    "ingredient": "Salt",
+                    "measure": "1 tsp "
+                },
+                {
+                    "ingredient": "Plain Flour",
+                    "measure": "\u00bd cup "
+                },
+                {
+                    "ingredient": "Milk",
+                    "measure": "1 1/2 cups "
+                }
+            ],
+            "instructions": [
+                "Preheat oven to 350 degrees F (175 degrees C). Grease a 9-inch pie dish.",
+                "Place the brown sugar and butter in a mixing bowl, and beat them together with an electric mixer until creamy and very well combined, without lumps. Beat in eggs, one at a time, incorporating the first egg before adding the next one. Add the vanilla extract and salt; beat the flour in, a little at a time, and then the milk, making a creamy batter. Pour the batter into the prepared pie dish.",
+                "Bake in the preheated oven for 35 minutes; remove pie, and cover the rim with aluminum foil to prevent burning. Return to oven, and bake until the middle sets and the top forms a crusty layer, about 15 more minutes. Let the pie cool to room temperature, then refrigerate for at least 1 hour before serving."
+            ],
+            "meal": "Sugar Pie",
+            "mealId": "52931",
+            "mealThumb": "https://www.themealdb.com/images/media/meals/yrstur1511816601.jpg",
+            "source": "http://allrecipes.com/recipe/213595/miraculous-canadian-sugar-pie/",
+            "tags": "Pie,Desert",
+            "youtube": "https://www.youtube.com/watch?v=uVQ66jiL-Dc"
+        },
+        {
+            "area": "American",
+            "category": "Dessert",
+            "creativeCommonsConfirmed": null,
+            "dateModified": null,
+            "drinkAlternate": null,
+            "imageSource": null,
+            "ingredients": [
+                {
+                    "ingredient": "Corn Flour",
+                    "measure": "1 tsp "
+                },
+                {
+                    "ingredient": "Orange",
+                    "measure": "Juice of 2"
+                },
+                {
+                    "ingredient": "Orange",
+                    "measure": "Zest of 1"
+                },
+                {
+                    "ingredient": "Caster Sugar",
+                    "measure": "2 tbs"
+                },
+                {
+                    "ingredient": "Peaches",
+                    "measure": "6"
+                },
+                {
+                    "ingredient": "Blueberries",
+                    "measure": "250g"
+                },
+                {
+                    "ingredient": "Self-raising Flour",
+                    "measure": "200g"
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "50g"
+                },
+                {
+                    "ingredient": "Muscovado Sugar",
+                    "measure": "100g "
+                },
+                {
+                    "ingredient": "Cinnamon",
+                    "measure": "1 tsp "
+                },
+                {
+                    "ingredient": "Milk",
+                    "measure": "6 tblsp"
+                }
+            ],
+            "instructions": [
+                "Heat oven to 190C/170C fan/gas 5. Butter a wide shallow ovenproof dish. Blend the cornflour with the orange zest and juice, and put in a large pan with the sugar. Halve, stone and slice the peaches and add to the pan. Bring slowly to the boil, stirring gently until the sauce is shiny and thickened, about 3-4 mins. Remove from the heat, stir in the blueberries and tip into the prepared dish.",
+                "Tip the flour into a mixing bowl and add the 50g butter. Rub the butter into the flour until it resembles fine breadcrumbs, then stir in half the sugar. Mix the remaining sugar with the cinnamon and set aside.",
+                "Add the milk to the dry ingredients and mix to a soft dough. Turn out onto a lightly floured surface and knead briefly. Roll out to an oblong roughly 16 x 24cm. Brush with melted butter and sprinkle evenly with the spicy sugar. Roll up from one long side and cut into 12 slices. Arrange around the top of the dish, leaving the centre uncovered.",
+                "Bake for 20-25 mins, until the topping is crisp and golden. Serve warm."
+            ],
+            "meal": "Peach & Blueberry Grunt",
+            "mealId": "52862",
+            "mealThumb": "https://www.themealdb.com/images/media/meals/ssxvup1511387476.jpg",
+            "source": "https://www.bbcgoodfood.com/recipes/1553651/peach-and-blueberry-grunt",
+            "tags": "Desert,Pudding,Fruity",
+            "youtube": "https://www.youtube.com/watch?v=SNeO28BCpsc"
+        },
+        {
+            "area": "Croatian",
+            "category": "Side",
+            "creativeCommonsConfirmed": null,
+            "dateModified": null,
+            "drinkAlternate": null,
+            "imageSource": null,
+            "ingredients": [
+                {
+                    "ingredient": "Filo Pastry",
+                    "measure": "1 Packet"
+                },
+                {
+                    "ingredient": "Minced Beef",
+                    "measure": "150g"
+                },
+                {
+                    "ingredient": "Onion",
+                    "measure": "150g"
+                },
+                {
+                    "ingredient": "Oil",
+                    "measure": "40g"
+                },
+                {
+                    "ingredient": "Salt",
+                    "measure": "Dash"
+                },
+                {
+                    "ingredient": "Pepper",
+                    "measure": "Dash"
+                }
+            ],
+            "instructions": [
+                "Fry the finely chopped onions and minced meat in oil. Add the salt and pepper. Grease a round baking tray and put a layer of pastry in it. Cover with a thin layer of filling and cover this with another layer of filo pastry which must be well coated in oil. Put another layer of filling and cover with pastry. When you have five or six layers, cover with filo pastry, bake at 200\u00baC/392\u00baF for half an hour and cut in quarters and serve."
+            ],
+            "meal": "Burek",
+            "mealId": "53060",
+            "mealThumb": "https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg",
+            "source": "https://www.visit-croatia.co.uk/croatian-cuisine/croatian-recipes/",
+            "tags": "Streetfood, Onthego",
+            "youtube": "https://www.youtube.com/watch?v=YsJXZwE5pdY"
+        },
+        {
+            "area": "Polish",
+            "category": "Pork",
+            "creativeCommonsConfirmed": null,
+            "dateModified": null,
+            "drinkAlternate": null,
+            "imageSource": null,
+            "ingredients": [
+                {
+                    "ingredient": "Bacon",
+                    "measure": "2 sliced"
+                },
+                {
+                    "ingredient": "Kielbasa",
+                    "measure": "1 lb"
+                },
+                {
+                    "ingredient": "Pork",
+                    "measure": "1 lb"
+                },
+                {
+                    "ingredient": "Flour",
+                    "measure": "1/4 cup"
+                },
+                {
+                    "ingredient": "Garlic",
+                    "measure": "3 chopped"
+                },
+                {
+                    "ingredient": "Onion",
+                    "measure": "1 Diced"
+                },
+                {
+                    "ingredient": "Mushrooms",
+                    "measure": "1 1/2 cup "
+                },
+                {
+                    "ingredient": "Cabbage",
+                    "measure": "4 cups "
+                },
+                {
+                    "ingredient": "Sauerkraut",
+                    "measure": "1 Jar"
+                },
+                {
+                    "ingredient": "Red Wine",
+                    "measure": "1/4 cup"
+                },
+                {
+                    "ingredient": "Bay Leaf",
+                    "measure": "1"
+                },
+                {
+                    "ingredient": "Basil",
+                    "measure": "1 tsp "
+                },
+                {
+                    "ingredient": "Marjoram",
+                    "measure": "1 tsp "
+                },
+                {
+                    "ingredient": "Paprika",
+                    "measure": "1 tbs"
+                },
+                {
+                    "ingredient": "Caraway Seed",
+                    "measure": "1/8 teaspoon"
+                },
+                {
+                    "ingredient": "Hotsauce",
+                    "measure": "1 dash"
+                },
+                {
+                    "ingredient": "Beef Stock",
+                    "measure": "5 Cups"
+                },
+                {
+                    "ingredient": "Tomato Puree",
+                    "measure": "2 tbs"
+                },
+                {
+                    "ingredient": "Diced Tomatoes",
+                    "measure": "1 cup "
+                },
+                {
+                    "ingredient": "Worcestershire Sauce",
+                    "measure": "1 dash"
+                }
+            ],
+            "instructions": [
+                "Preheat the oven to 350 degrees F (175 degrees C).",
+                "",
+                "Heat a large pot over medium heat. Add the bacon and kielbasa; cook and stir until the bacon has rendered its fat and sausage is lightly browned. Use a slotted spoon to remove the meat and transfer to a large casserole or Dutch oven.",
+                "",
+                "Coat the cubes of pork lightly with flour and fry them in the bacon drippings over medium-high heat until golden brown. Use a slotted spoon to transfer the pork to the casserole. Add the garlic, onion, carrots, fresh mushrooms, cabbage and sauerkraut. Reduce heat to medium; cook and stir until the carrots are soft, about 10 minutes. Do not let the vegetables brown.",
+                "",
+                "Deglaze the pan by pouring in the red wine and stirring to loosen all of the bits of food and flour that are stuck to the bottom. Season with the bay leaf, basil, marjoram, paprika, salt, pepper, caraway seeds and cayenne pepper; cook for 1 minute.",
+                "",
+                "Mix in the dried mushrooms, hot pepper sauce, Worcestershire sauce, beef stock, tomato paste and tomatoes. Heat through just until boiling. Pour the vegetables and all of the liquid into the casserole dish with the meat. Cover with a lid.",
+                "",
+                "Bake in the preheated oven for 2 1/2 to 3 hours, until meat is very tender."
+            ],
+            "meal": "Bigos (Hunters Stew)",
+            "mealId": "53018",
+            "mealThumb": "https://www.themealdb.com/images/media/meals/md8w601593348504.jpg",
+            "source": "https://www.allrecipes.com/recipe/138131/bigos-hunters-stew/",
+            "tags": null,
+            "youtube": "https://www.youtube.com/watch?v=Oqg_cO4s8ik"
+        },
+        {
+            "area": "Irish",
+            "category": "Pork",
+            "creativeCommonsConfirmed": null,
+            "dateModified": null,
+            "drinkAlternate": null,
+            "imageSource": null,
+            "ingredients": [
+                {
+                    "ingredient": "Floury Potatoes",
+                    "measure": "800g"
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "50g"
+                },
+                {
+                    "ingredient": "Garlic Clove",
+                    "measure": "3 chopped"
+                },
+                {
+                    "ingredient": "Cabbage",
+                    "measure": "1 chopped"
+                },
+                {
+                    "ingredient": "Spring Onions",
+                    "measure": "8"
+                },
+                {
+                    "ingredient": "Double Cream",
+                    "measure": "100ml"
+                },
+                {
+                    "ingredient": "Mustard",
+                    "measure": "2 tbs"
+                },
+                {
+                    "ingredient": "Ham",
+                    "measure": "180g"
+                },
+                {
+                    "ingredient": "Eggs",
+                    "measure": "4"
+                }
+            ],
+            "instructions": [
+                "STEP 1",
+                "Peel and cut the potatoes into even, medium-sized chunks. Put in a large pan filled with cold salted water, bring to the boil and cook for 10-15 mins until a knife can be inserted into the potatoes easily.",
+                "",
+                "STEP 2",
+                "Meanwhile, melt the butter in a large saut\u00e9 pan over a medium heat. Add the garlic, cabbage, spring onions and some seasoning. Stir occasionally until the cabbage is wilted but still retains a little bite, then set aside.",
+                "",
+                "STEP 3",
+                "Drain the potatoes, leave to steam-dry for a couple of mins, then mash with the cream, mustard and seasoning in the same saucepan. Stir in the cabbage and ham hock. Keep warm over a low heat.",
+                "",
+                "STEP 4",
+                "Reheat the pan you used to cook the cabbage (no need to wash first), add a splash of oil, crack in the eggs and fry to your liking. To serve, divide the colcannon between bowls and top each with a fried egg."
+            ],
+            "meal": "Ham hock colcannon",
+            "mealId": "53035",
+            "mealThumb": "https://www.themealdb.com/images/media/meals/n41ny81608588066.jpg",
+            "source": "https://www.bbcgoodfood.com/recipes/ham-hock-colcannon",
+            "tags": null,
+            "youtube": "https://www.youtube.com/watch?v=aQJAU2iJ730"
+        },
+        {
+            "area": "French",
+            "category": "Dessert",
+            "creativeCommonsConfirmed": null,
+            "dateModified": null,
+            "drinkAlternate": null,
+            "imageSource": null,
+            "ingredients": [
+                {
+                    "ingredient": "Single Cream",
+                    "measure": "142ml"
+                },
+                {
+                    "ingredient": "Caster Sugar",
+                    "measure": "25g"
+                },
+                {
+                    "ingredient": "Dark Chocolate",
+                    "measure": "100g "
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "25g"
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "drizzle"
+                },
+                {
+                    "ingredient": "Caster Sugar",
+                    "measure": "50g"
+                },
+                {
+                    "ingredient": "Dark Chocolate",
+                    "measure": "175g"
+                },
+                {
+                    "ingredient": "Double Cream",
+                    "measure": "2 tbs"
+                },
+                {
+                    "ingredient": "Egg Yolks",
+                    "measure": "4"
+                },
+                {
+                    "ingredient": "Egg White",
+                    "measure": "5"
+                },
+                {
+                    "ingredient": "Double Cream",
+                    "measure": "2 tbs"
+                },
+                {
+                    "ingredient": "Icing Sugar",
+                    "measure": "to serve"
+                }
+            ],
+            "instructions": [
+                "Heat oven to 220C/fan 200C/gas 7 and place a baking tray on the top shelf. For the sauce, heat the cream and sugar until boiling. Remove from the heat, stir in the chocolate and butter until melted, then keep warm.",
+                "Brush 6 x 150ml ramekins with melted butter, sprinkle with the 2 tbsp caster sugar, then tip out any excess. Melt the chocolate and cream in a bowl over a pan of simmering water, cool, then mix in the egg yolks. Whisk the egg whites until they hold their shape, then add the sugar, 1 tbsp at a time, whisking back to the same consistency. Mix a spoonful into the chocolate, then gently fold in the rest.",
+                "Working quickly, fill the ramekins, wipe the rims clean and run your thumb around the edges. Turn oven down to 200C/fan 180C/gas 6, place the ramekins onto the baking tray, then bake for 8-10 mins until risen with a slight wobble. Don\u2019t open the oven door too early as this may make them collapse.",
+                "Once the souffl\u00e9s are ready, dust with icing sugar, scoop a small hole from their tops, then pour in some of the hot chocolate sauce. Replace the lids and serve straight away."
+            ],
+            "meal": "Chocolate Souffle",
+            "mealId": "52905",
+            "mealThumb": "https://www.themealdb.com/images/media/meals/twspvx1511784937.jpg",
+            "source": "https://www.bbcgoodfood.com/recipes/5816/hot-chocolate-souffls-with-chocolate-cream-sauce",
+            "tags": "DinnerParty,Desert,Pudding,Chocolate",
+            "youtube": "https://www.youtube.com/watch?v=FWqfkUEWOTg"
+        }
+    ],
+    "groceryList": [
+        "Udon Noodles: 250g",
+        "Sesame Seed Oil: 2 tbs",
+        "Onion: 1 sliced & 150g & 1 Diced",
+        "Cabbage: 0.25 & 4 cups  & 1 chopped",
+        "Shiitake Mushrooms: 10",
+        "Spring Onions: 4 & 8",
+        "Mirin: 4 tbsp",
+        "Soy Sauce: 2 tbs",
+        "Caster Sugar: 1 tblsp  & 2 tbs & 25g & 50g",
+        "Worcestershire Sauce: 1 tblsp  & 1 dash",
+        "Brown Sugar: 2 cups ",
+        "Butter: \u00bc cup & 50g & 50g & 25g & drizzle",
+        "Eggs: 2 & 4",
+        "Vanilla Extract: 1 tsp ",
+        "Salt: 1 tsp  & Dash",
+        "Plain Flour: \u00bd cup ",
+        "Milk: 1 1/2 cups  & 6 tblsp",
+        "Corn Flour: 1 tsp ",
+        "Orange: Juice of 2 & Zest of 1",
+        "Peaches: 6",
+        "Blueberries: 250g",
+        "Self-raising Flour: 200g",
+        "Muscovado Sugar: 100g ",
+        "Cinnamon: 1 tsp ",
+        "Filo Pastry: 1 Packet",
+        "Minced Beef: 150g",
+        "Oil: 40g",
+        "Pepper: Dash",
+        "Bacon: 2 sliced",
+        "Kielbasa: 1 lb",
+        "Pork: 1 lb",
+        "Flour: 1/4 cup",
+        "Garlic: 3 chopped",
+        "Mushrooms: 1 1/2 cup ",
+        "Sauerkraut: 1 Jar",
+        "Red Wine: 1/4 cup",
+        "Bay Leaf: 1",
+        "Basil: 1 tsp ",
+        "Marjoram: 1 tsp ",
+        "Paprika: 1 tbs",
+        "Caraway Seed: 1/8 teaspoon",
+        "Hotsauce: 1 dash",
+        "Beef Stock: 5 Cups",
+        "Tomato Puree: 2 tbs",
+        "Diced Tomatoes: 1 cup ",
+        "Floury Potatoes: 800g",
+        "Garlic Clove: 3 chopped",
+        "Double Cream: 100ml & 2 tbs & 2 tbs",
+        "Mustard: 2 tbs",
+        "Ham: 180g",
+        "Single Cream: 142ml",
+        "Dark Chocolate: 100g  & 175g",
+        "Egg Yolks: 4",
+        "Egg White: 5",
+        "Icing Sugar: to serve"
+    ]
+}

@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Roguelite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/randomMeals.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/randomMeals.js') }}"></script>
+</head>
+<script>
+    let meals = {{ meals | tojson }};
+</script>
+<body>
+    <div class="container">
+        {% include "toolbar.html" %}
+        <h2 id="grocery-list-header" onclick="toggleGroceryList()">Grocery List<span id="grocery-list-arrow">▼</span></h2>
+        <ul id="grocery-list">
+            {% for ingredient, quantity in grocery_list.items() %}
+            <li onclick="removeItem(this)">{{ ingredient }}: {{ quantity }}</li>
+            {% endfor %}
+        </ul>
+        <button id="save-button" onclick="saveMeals()">Save Meals</button>
+        <table border="1">
+            <tr>
+            <th>Name</th>
+            <th>Ingredients</th>
+            </tr>
+            {% for meal in meals %}
+            <tr onclick="rerollMeal(this, '{{ loop.index0 }}')">
+            <!-- <td>{{ meal['meal'] }}</td>
+            <td>{{ formatIngredients(meal['ingredients']) }}</td>
+            <td>{{ meal['instructions'] }}</td> -->
+            <td>{{ meal['meal'] }}</td>
+            <td><img src="{{ meal['mealThumb'] }}" alt="{{ meal['meal'] }}" width="100"></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
