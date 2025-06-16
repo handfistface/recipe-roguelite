@@ -3,7 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Roguelite</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/randomMeals.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/randomMeals.js') }}"></script>
 </head>
 <script>
@@ -26,9 +25,6 @@
             </tr>
             {% for meal in meals %}
             <tr onclick="rerollMeal(this, '{{ loop.index0 }}')">
-            <!-- <td>{{ meal['meal'] }}</td>
-            <td>{{ formatIngredients(meal['ingredients']) }}</td>
-            <td>{{ meal['instructions'] }}</td> -->
             <td>{{ meal['meal'] }}</td>
             <td><img src="{{ meal['mealThumb'] }}" alt="{{ meal['meal'] }}" width="100"></td>
             </tr>

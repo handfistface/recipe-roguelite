@@ -15,8 +15,109 @@ body {
     box-shadow: 9px 9px 16px #181a1f, -9px -9px 16px #2e323a;
 }
 
+/* Meals Page Styles */
+#meals-container {
+    padding: 20px;
+    background-color: #23272f;
+    color: #e0e0e0;
+    box-shadow: 9px 9px 16px #181a1f, -9px -9px 16px #2e323a;
+}
+
+#meal-form {
+    margin-bottom: 20px;
+    background-color: #23272f;
+    color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #181a1f, -5px -5px 10px #2e323a;
+}
+
+#meals-list {
+    margin-top: 20px;
+    background-color: #23272f;
+    color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #181a1f, -5px -5px 10px #2e323a;
+}
+
+/* Random Meals Page Styles */
+#grocery-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    background: #23272f;
+    color: #e0e0e0;
+}
+#grocery-list li {
+    background: #23272f;
+    color: #e0e0e0;
+    box-shadow: 5px 5px 10px #181a1f, -5px -5px 10px #2e323a;
+    margin: 10px 0;
+    padding: 5px;
+    transition: all 1.0s ease;
+    cursor: pointer;
+}
+#grocery-list.collapsed {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#grocery-list-header {
+    cursor: pointer;
+    background: #23272f;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #181a1f, -5px -5px 10px #2e323a;
+    transition: background 1.0s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#grocery-list-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#grocery-list.collapsed + #grocery-list-header #grocery-list-arrow {
+    transform: rotate(-90deg);
+}
+#grocery-list li:hover {
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+
+#save-button {
+    background: #23272f;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #181a1f, -5px -5px 10px #2e323a;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+#save-button:hover {
+    box-shadow: inset 5px 5px 10px #181a1f, inset -5px -5px 10px #2e323a;
+}
+
+input, textarea, button {
+    background-color: #23272f;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #181a1f, inset -5px -5px 10px #2e323a;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 input[type="text"] {
-    width: calc(100% - 20px); /* Adjust width to fit within the container */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
     border: none;
@@ -27,11 +128,21 @@ input[type="text"] {
     color: #e0e0e0;
 }
 
+button {
+    box-shadow: 5px 5px 10px #181a1f, -5px -5px 10px #2e323a;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: inset 5px 5px 10px #181a1f, inset -5px -5px 10px #2e323a;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #23272f;
+    margin-top: 20px;
 }
 
 th, td {
@@ -39,16 +150,11 @@ th, td {
     text-align: left;
     border-radius: 10px;
     box-shadow: inset 5px 5px 10px #181a1f, inset -5px -5px 10px #2e323a;
-    padding: 0;
     margin: 0;
     text-align: center;
     vertical-align: middle;
     background-color: #23272f;
     color: #e0e0e0;
-}
-
-table, th, td {
-    border: none;
 }
 
 th {
@@ -76,7 +182,7 @@ a:hover {
 .meal-thumbnail {
     width: 100px;
     height: 100px;
-    object-fit: cover; /* Ensures the image fills the square */
+    object-fit: cover;
     border-radius: 8px;
     display: block;
     background-color: #23272f;
