@@ -1,13 +1,5 @@
 //let meals = {{ meals | tojson }};
             
-function removeItem(element) {
-    element.style.transition = "opacity 0.5s ease-out";
-    element.style.opacity = 0;
-    setTimeout(function() {
-    element.style.display = "none";
-    }, 500);
-}
-
 function rerollMeal(element, index) {
     fetch('/randommeals/reroll', {
         method: 'POST',
@@ -19,42 +11,12 @@ function rerollMeal(element, index) {
     .then(response => response.json())
     .then(data => {
         meals[index] = data;
-        // element.innerHTML = `
-        //     <td>${data.meal}</td>
-        //     <td>${formatIngredients(data.ingredients)}</td>
-        //     <td>${data.instructions}</td>
-        // `;
         element.innerHTML = `
             <td>${ data.meal }</td>
             <td><img src="${ data.mealThumb }" alt="${ data.meal }" width="100"></td>
         `;
         updateGroceryList();
     });
-}
-
-function formatIngredients(ingredients) {
-    return ingredients.map(ingredient => ingredient.ingredient + ': ' + ingredient.measure).join(', ');
-}
-
-// Shared function for rendering grocery list from data (object or array)
-function updateGroceryListFromData(groceryList) {
-    const groceryUl = document.getElementById('grocery-list');
-    groceryUl.innerHTML = '';
-    if (Array.isArray(groceryList)) {
-        groceryList.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            li.onclick = () => removeItem(li);
-            groceryUl.appendChild(li);
-        });
-    } else if (typeof groceryList === 'object') {
-        Object.entries(groceryList).forEach(([ingredient, measure]) => {
-            const li = document.createElement('li');
-            li.textContent = `${ingredient}: ${measure}`;
-            li.onclick = () => removeItem(li);
-            groceryUl.appendChild(li);
-        });
-    }
 }
 
 function updateGroceryList() {
