@@ -1,0 +1,4 @@
+To start the program you will run "python -m app". 
+You can load the webpage http://127.0.0.1:5000 to view the new web page(s) you've created. 
+To stop the program you will have to find the process and kill it. 
+You are running 24.04 Ubuntu Linux. 

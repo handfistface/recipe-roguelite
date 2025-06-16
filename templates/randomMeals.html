@@ -17,7 +17,8 @@
             <li onclick="removeItem(this)">{{ ingredient }}: {{ quantity }}</li>
             {% endfor %}
         </ul>
-        <button id="save-button" onclick="saveMeals()">Save Meals</button>
+        <button id="save-button" onclick="saveMeals()">Save As</button>
+        <a href="/randommeals/loadMeals" id="load-meals-button" style="margin-left:10px;">Load Meals</a>
         <table border="1">
             <tr>
             <th>Name</th>

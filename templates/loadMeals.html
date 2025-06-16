@@ -1,0 +1,33 @@
+<!-- loadMeals.html: Page to list and load saved meal groups -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Saved Meals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/loadMeals.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        {% include "toolbar.html" %}
+        <h2>Load Saved Meal Groups</h2>
+        <table id="saved-meals-table" border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Created</th>
+                    <th>Last Loaded</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populated by JS -->
+            </tbody>
+        </table>
+        <div id="loaded-meals-container" style="display:none;">
+            <h3>Loaded Meals</h3>
+            <div id="meals-list"></div>
+            <h3>Grocery List</h3>
+            <ul id="grocery-list"></ul>
+        </div>
+    </div>
+</body>

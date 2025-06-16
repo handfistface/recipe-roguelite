@@ -36,9 +36,29 @@ function formatIngredients(ingredients) {
     return ingredients.map(ingredient => ingredient.ingredient + ': ' + ingredient.measure).join(', ');
 }
 
+// Shared function for rendering grocery list from data (object or array)
+function updateGroceryListFromData(groceryList) {
+    const groceryUl = document.getElementById('grocery-list');
+    groceryUl.innerHTML = '';
+    if (Array.isArray(groceryList)) {
+        groceryList.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            li.onclick = () => removeItem(li);
+            groceryUl.appendChild(li);
+        });
+    } else if (typeof groceryList === 'object') {
+        Object.entries(groceryList).forEach(([ingredient, measure]) => {
+            const li = document.createElement('li');
+            li.textContent = `${ingredient}: ${measure}`;
+            li.onclick = () => removeItem(li);
+            groceryUl.appendChild(li);
+        });
+    }
+}
+
 function updateGroceryList() {
-    const groceryList = document.getElementById('grocery-list');
-    groceryList.innerHTML = '';
+    // Rebuild grocery list from meals
     const groceryItems = {};
     meals.forEach(meal => {
         meal.ingredients.forEach(ingredient => {
@@ -49,20 +69,21 @@ function updateGroceryList() {
             }
         });
     });
-    for (const [ingredient, measure] of Object.entries(groceryItems)) {
-        const li = document.createElement('li');
-        li.textContent = `${ingredient}: ${measure}`;
-        li.onclick = () => removeItem(li);
-        groceryList.appendChild(li);
-    }
+    updateGroceryListFromData(groceryItems);
 }
 
+// Add Save As dialog for naming meal group
 function saveMeals() {
+    let groupName = prompt('Enter a name for this meal group:');
+    if (!groupName) return;
+    const now = new Date();
+    const creationDate = now.toISOString().split('T')[0];
     const data = {
+        groupName: groupName,
+        creationDate: creationDate,
         meals: meals,
         groceryList: Array.from(document.querySelectorAll('#grocery-list li')).map(li => li.textContent)
     };
-
     fetch('/randommeals/save', {
         method: 'POST',
         headers: {
