@@ -8,12 +8,75 @@
     <div id="meals-container">
         <h1>Manage Meals</h1>
         <form id="meal-form">
-            <input type="text" id="meal-name" placeholder="Meal Name" required>
-            <textarea id="meal-description" placeholder="Description"></textarea>
+            <input type="hidden" id="meal-id" value="{{ meal_id if meal_id is defined else '' }}">
+            <div class="form-group">
+                <label for="meal-name">Meal Name</label>
+                <input type="text" id="meal-name" name="meal" placeholder="Meal Name" required value="{{ meal['meal'] if meal is defined else '' }}">
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" name="category" placeholder="Category" value="{{ meal['category'] if meal is defined else '' }}">
+            </div>
+            <div class="form-group">
+                <label for="area">Area</label>
+                <input type="text" id="area" name="area" placeholder="Area" value="{{ meal['area'] if meal is defined else '' }}">
+            </div>
+            <div class="form-group">
+                <label for="instructions">Instructions (one per line)</label>
+                <textarea id="instructions" name="instructions" placeholder="Instructions">{% if meal is defined and meal['instructions'] %}{{ '\n'.join(meal['instructions']) }}{% endif %}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="mealThumb">Image URL</label>
+                <input type="text" id="mealThumb" name="mealThumb" placeholder="Image URL" value="{{ meal['mealThumb'] if meal is defined else '' }}">
+                {% if meal is defined and meal['mealThumb'] %}
+                <img src="{{ meal['mealThumb'] }}" alt="Meal Image" style="max-width:200px;display:block;margin-top:8px;">
+                {% endif %}
+            </div>
+            <div class="form-group">
+                <label for="tags">Tags (comma separated)</label>
+                <input type="text" id="tags" name="tags" placeholder="Tags" value="{{ meal['tags'] if meal is defined else '' }}">
+            </div>
+            <div class="form-group">
+                <label for="youtube">YouTube Link</label>
+                <input type="text" id="youtube" name="youtube" placeholder="YouTube Link" value="{{ meal['youtube'] if meal is defined else '' }}">
+            </div>
+            <div class="form-group">
+                <label>Ingredients</label>
+                <div id="ingredients-list">
+                    {% if meal is defined and meal['ingredients'] %}
+                        {% for ing in meal['ingredients'] %}
+                        <div class="ingredient-row">
+                            <input type="text" class="ingredient-name" placeholder="Ingredient" value="{{ ing['ingredient'] }}">
+                            <input type="text" class="ingredient-measure" placeholder="Measure" value="{{ ing['measure'] }}">
+                            <button type="button" class="remove-ingredient">Remove</button>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <button type="button" id="add-ingredient">Add Ingredient</button>
+            </div>
             <button type="submit">Save Meal</button>
         </form>
         <div id="meals-list"></div>
     </div>
     <script src="/static/js/meals.js"></script>
+    <script>
+    // Ingredient add/remove logic
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('add-ingredient').addEventListener('click', function() {
+            const row = document.createElement('div');
+            row.className = 'ingredient-row';
+            row.innerHTML = `<input type="text" class="ingredient-name" placeholder="Ingredient">
+                <input type="text" class="ingredient-measure" placeholder="Measure">
+                <button type="button" class="remove-ingredient">Remove</button>`;
+            document.getElementById('ingredients-list').appendChild(row);
+        });
+        document.getElementById('ingredients-list').addEventListener('click', function(e) {
+            if (e.target.classList.contains('remove-ingredient')) {
+                e.target.parentElement.remove();
+            }
+        });
+    });
+    </script>
 </body>
 </html>

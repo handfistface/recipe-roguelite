@@ -1,8 +1,6 @@
 [
     {
-        "mealId": "52768",
         "meal": "Apple Frangipan Tart",
-        "drinkAlternate": null,
         "category": "Dessert",
         "area": "British",
         "instructions": [
@@ -55,10 +53,8 @@
                 "measure": "50g/1\u00beoz"
             }
         ],
-        "source": null,
-        "imageSource": null,
-        "creativeCommonsConfirmed": null,
-        "dateModified": null
+        "mealId": "52768",
+        "dateModified": "2025-07-14T11:44:24.080409"
     },
     {
         "mealId": "52893",

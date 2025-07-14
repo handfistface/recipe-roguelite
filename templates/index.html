@@ -16,7 +16,7 @@
             <tr>
                 <td><img src="{{ meal['mealThumb'] }}" alt="{{ meal['meal'] }}" width="100"></td>
                 <td>{{ meal['meal'] }}</td>
-                <td><a href="{{ url_for('meals.edit_meal', meal_id=meal['id']) }}">Edit</a></td>
+                <td><a href="/meals/edit/{{ meal['mealId'] }}">Edit</a></td>
             </tr>
             {% endfor %}
         </table>
