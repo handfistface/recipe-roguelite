@@ -5,9 +5,15 @@ document.getElementById("meal-form").addEventListener("submit", async (e) => {
     const meal = document.getElementById("meal-name").value;
     const category = document.getElementById("category").value;
     const area = document.getElementById("area").value;
-    const instructions = document.getElementById("instructions").value
-        .split(/\r?\n/)
-        .filter(line => line.trim() !== "");
+    // Gather instructions from instruction rows
+    const instructionRows = document.querySelectorAll("#instructions-list .instruction-row");
+    const instructions = [];
+    instructionRows.forEach(row => {
+        const instr = row.querySelector('.instruction-text').value;
+        if (instr.trim() !== "") {
+            instructions.push(instr);
+        }
+    });
     const mealThumb = document.getElementById("mealThumb").value;
     const tags = document.getElementById("tags").value;
     const youtube = document.getElementById("youtube").value;
