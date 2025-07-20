@@ -10,31 +10,31 @@
     <script src="/static/js/mealCollection.js"></script>
 </head>
 <body>
+    {% include "toolbar.html" %}
     <div class="container">
         <h2>Meal Collections</h2>
         <a href="/collections/create_collection" class="btn btn-primary">Create New Collection</a>
         <div id="collectionsList">
             {% if collections and collections|length > 0 %}
-                <ul>
-                {% for collection in collections %}
-                    <li>
-                        <strong>{{ collection.name }}</strong><br>
-                        <span>{{ collection.description }}</span><br>
-                        <span>Meals: {{ collection.meals|length }}</span><br>
-                        <span>Last Edited: {{ collection.editDate }}</span>
-                    </li>
-                {% endfor %}
-                </ul>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Meal Count</th>
+                    </tr>
+                    {% for collection in collections %}
+                    <tr>
+                        <td>{{ collection.name }}</td>
+                        <td>{{ collection.description }}</td>
+                        <td>{{ collection.meals|length }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
                 {% if page_count > 1 %}
-                <nav>
-                    <ul class="pagination">
-                        {% for page_num in range(1, page_count + 1) %}
-                            <li class="page-item {% if page_num == current_page %}active{% endif %}">
-                                <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
+                <div>
+                    <a href="?page={{ current_page - 1 if current_page > 1 else 1 }}">Previous</a>
+                    <a href="?page={{ current_page + 1 if current_page < page_count else page_count }}">Next</a>
+                </div>
                 {% endif %}
             {% else %}
                 <p>No collections found.</p>

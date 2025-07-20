@@ -1,3 +1,50 @@
+/* Neumorphic Table Styles - Dark Mode */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #23272f;
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #181a1f, -8px -8px 16px #2e323a;
+    overflow: hidden;
+    margin-top: 20px;
+}
+th, td {
+    padding: 16px 24px;
+    text-align: left;
+    background: #23272f;
+    color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px #181a1f, inset -2px -2px 5px #2e323a;
+}
+th {
+    font-weight: bold;
+    color: #e0e0e0;
+    background: #2e323a;
+}
+tr {
+    transition: background 0.2s;
+}
+tr:hover {
+    background: #282c34;
+}
+.pagination {
+    margin-top: 16px;
+}
+.pagination a {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: #23272f;
+    box-shadow: 2px 2px 6px #181a1f, -2px -2px 6px #2e323a;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.pagination a:hover, .pagination .active a {
+    background: #2e323a;
+}
 /* Themed scrollbars for textarea and other scrollable elements */
 textarea, #instructions-list, #ingredients-list, .instruction-row, .ingredient-row {
     scrollbar-width: thin;
