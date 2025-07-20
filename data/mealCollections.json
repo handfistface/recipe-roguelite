@@ -1,0 +1,24 @@
+{
+    "collections": [
+        {
+            "description": "A collection of breakfast meals.",
+            "editDate": "2023-10-01T12:00:00Z",
+            "id": "1",
+            "meals": [
+                "52893",
+                "52894"
+            ],
+            "name": "Breakfast"
+        },
+        {
+            "description": "My description",
+            "editDate": "2025-07-19T18:49:49.687831Z",
+            "id": "3",
+            "meals": [
+                "123",
+                "456"
+            ],
+            "name": "Hello world"
+        }
+    ]
+}

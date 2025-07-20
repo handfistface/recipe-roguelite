@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Roguelite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="/static/js/mealCollection.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Meal Collections</h2>
+        <a href="/collections/create_collection" class="btn btn-primary">Create New Collection</a>
+        <div id="collectionsList">
+            {% if collections and collections|length > 0 %}
+                <ul>
+                {% for collection in collections %}
+                    <li>
+                        <strong>{{ collection.name }}</strong><br>
+                        <span>{{ collection.description }}</span><br>
+                        <span>Meals: {{ collection.meals|length }}</span><br>
+                        <span>Last Edited: {{ collection.editDate }}</span>
+                    </li>
+                {% endfor %}
+                </ul>
+                {% if page_count > 1 %}
+                <nav>
+                    <ul class="pagination">
+                        {% for page_num in range(1, page_count + 1) %}
+                            <li class="page-item {% if page_num == current_page %}active{% endif %}">
+                                <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                {% endif %}
+            {% else %}
+                <p>No collections found.</p>
+            {% endif %}
+        </div>
+        <hr>
+        <div id="searchSection" style="display:none;">
+            <h3>Search Meals</h3>
+            <input type="text" id="mealSearchInput" placeholder="Search for meals">
+            <button id="searchMealBtn">Search</button>
+            <ul id="searchResults"></ul>
+        </div>
+        <div id="collectionMealsSection" style="display:none;">
+            <h3>Meals in Collection</h3>
+            <ul id="collectionMeals"></ul>
+        </div>
+    </div>
+</body>
+</html>

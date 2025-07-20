@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Roguelite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="/static/js/createCollection.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a New Meal Collection</h2>
+        <form id="createCollectionForm">
+            <div class="form-group">
+                <label for="collectionName">Collection Name</label>
+                <input type="text" id="collectionName" name="collectionName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="collectionDescription">Description</label>
+                <textarea id="collectionDescription" name="collectionDescription" class="form-control" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="collectionMeals">Meals (comma-separated meal IDs)</label>
+                <textarea id="collectionMeals" name="collectionMeals" class="form-control" rows="2" placeholder="e.g. 52893,52894"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Collection</button>
+        </form>
+        <div id="creationMessage" style="margin-top:20px;"></div>
+    </div>
+</body>
+</html>
