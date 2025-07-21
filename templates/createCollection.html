@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Create a New Meal Collection</h2>
+        <h2 id="formTitle">Create a New Meal Collection</h2>
         <form id="createCollectionForm">
             <div class="form-group">
                 <label for="collectionName">Collection Name</label>
@@ -24,9 +24,45 @@
                 <label for="collectionMeals">Meals (comma-separated meal IDs)</label>
                 <textarea id="collectionMeals" name="collectionMeals" class="form-control" rows="2" placeholder="e.g. 52893,52894"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Create Collection</button>
+            <button type="submit" id="formCreateBtn" class="btn btn-primary">Create Collection</button>
         </form>
         <div id="creationMessage" style="margin-top:20px;"></div>
+    <hr>
+    <h3>Meals in this Collection</h3>
+    <button id="addMealBtn" class="btn btn-success" type="button">Add Meal</button>
+    <table id="mealsTable" class="table" style="margin-top:10px;">
+        <thead>
+            <tr>
+                <th>Meal</th>
+                <th>Image</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Modal for searching meals -->
+    <div id="searchModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1000;">
+        <div style="background:#fff; margin:5% auto; padding:20px; width:90%; max-width:600px; border-radius:8px; position:relative;">
+            <button id="closeModalBtn" style="position:absolute; top:10px; right:10px; font-size:20px; background:none; border:none;">&times;</button>
+            <h4>Search Meals</h4>
+            <input type="text" id="searchInput" class="form-control" placeholder="Type meal name..." style="margin-bottom:10px;">
+            <table id="searchResultsTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Meal</th>
+                        <th>Image</th>
+                        <th>Add</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+        <button id="saveCollectionBtn" class="btn" style="background:#28a745; color:#fff; font-size:18px; padding:12px 32px; border-radius:12px; display:none;">Save Collection</button>
+        <button id="createCollectionBtn" class="btn" style="background:#28a745; color:#fff; font-size:18px; padding:12px 32px; border-radius:12px; display:none;">Create Collection</button>
+    </div>
     </div>
 </body>
 </html>

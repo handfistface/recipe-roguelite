@@ -21,12 +21,14 @@
                         <th>Name</th>
                         <th>Description</th>
                         <th>Meal Count</th>
+                        <th>Edit</th>
                     </tr>
                     {% for collection in collections %}
                     <tr>
                         <td>{{ collection.name }}</td>
                         <td>{{ collection.description }}</td>
                         <td>{{ collection.meals|length }}</td>
+                        <td><a href="/collections/create_collection?collection_id={{ collection.id }}" class="btn btn-secondary">Edit</a></td>
                     </tr>
                     {% endfor %}
                 </table>

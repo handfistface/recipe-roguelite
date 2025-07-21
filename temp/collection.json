@@ -1,0 +1,169 @@
+{
+    "description": "My description",
+    "editDate": "2025-07-19T18:49:49.687831Z",
+    "id": "3",
+    "meals": [
+        {
+            "mealId": "52893",
+            "meal": "Apple & Blackberry Crumble",
+            "drinkAlternate": null,
+            "category": "Dessert",
+            "area": "British",
+            "instructions": [
+                "Heat oven to 190C/170C fan/gas 5. Tip the flour and sugar into a large bowl. Add the butter, then rub into the flour using your fingertips to make a light breadcrumb texture. Do not overwork it or the crumble will become heavy. Sprinkle the mixture evenly over a baking sheet and bake for 15 mins or until lightly coloured.",
+                "Meanwhile, for the compote, peel, core and cut the apples into 2cm dice. Put the butter and sugar in a medium saucepan and melt together over a medium heat. Cook for 3 mins until the mixture turns to a light caramel. Stir in the apples and cook for 3 mins. Add the blackberries and cinnamon, and cook for 3 mins more. Cover, remove from the heat, then leave for 2-3 mins to continue cooking in the warmth of the pan.",
+                "To serve, spoon the warm fruit into an ovenproof gratin dish, top with the crumble mix, then reheat in the oven for 5-10 mins. Serve with vanilla ice cream."
+            ],
+            "mealThumb": "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg",
+            "tags": "Pudding",
+            "youtube": "https://www.youtube.com/watch?v=4vhcOwVBDO4",
+            "ingredients": [
+                {
+                    "ingredient": "Plain Flour",
+                    "measure": "120g"
+                },
+                {
+                    "ingredient": "Caster Sugar",
+                    "measure": "60g"
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "60g"
+                },
+                {
+                    "ingredient": "Braeburn Apples",
+                    "measure": "300g"
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "30g"
+                },
+                {
+                    "ingredient": "Demerara Sugar",
+                    "measure": "30g"
+                },
+                {
+                    "ingredient": "Blackberries",
+                    "measure": "120g"
+                },
+                {
+                    "ingredient": "Cinnamon",
+                    "measure": "\\u00bc teaspoon"
+                },
+                {
+                    "ingredient": "Ice Cream",
+                    "measure": "to serve"
+                }
+            ],
+            "source": "https://www.bbcgoodfood.com/recipes/778642/apple-and-blackberry-crumble",
+            "imageSource": null,
+            "creativeCommonsConfirmed": null,
+            "dateModified": null
+        },
+        {
+            "mealId": "52894",
+            "meal": "Battenberg Cake",
+            "drinkAlternate": null,
+            "category": "Dessert",
+            "area": "British",
+            "instructions": [
+                "Heat oven to 180C/160C fan/gas 4 and line the base and sides of a 20cm square tin with baking parchment (the easiest way is to cross 2 x 20cm-long strips over the base). To make the almond sponge, put the butter, sugar, flour, ground almonds, baking powder, eggs, vanilla and almond extract in a large bowl. Beat with an electric whisk until the mix comes together smoothly. Scrape into the tin, spreading to the corners, and bake for 25-30 mins \\u2013 when you poke in a skewer, it should come out clean. Cool in the tin for 10 mins, then transfer to a wire rack to finish cooling while you make the second sponge.",
+                "For the pink sponge, line the tin as above. Mix all the ingredients together as above, but don\\u2019t add the almond extract. Fold in some pink food colouring. Then scrape it all into the tin and bake as before. Cool.",
+                "To assemble, heat the jam in a small pan until runny, then sieve. Barely trim two opposite edges from the almond sponge, then well trim a third edge. Roughly measure the height of the sponge, then cutting from the well-trimmed edge, use a ruler to help you cut 4 slices each the same width as the sponge height. Discard or nibble leftover sponge. Repeat with pink cake.",
+                "Take 2 x almond slices and 2 x pink slices and trim so they are all the same length. Roll out one marzipan block on a surface lightly dusted with icing sugar to just over 20cm wide, then keep rolling lengthways until the marzipan is roughly 0.5cm thick. Brush with apricot jam, then lay a pink and an almond slice side by side at one end of the marzipan, brushing jam in between to stick sponges, and leaving 4cm clear marzipan at the end. Brush more jam on top of the sponges, then sandwich remaining 2 slices on top, alternating colours to give a checkerboard effect. Trim the marzipan to the length of the cakes.",
+                "Carefully lift up the marzipan and smooth over the cake with your hands, but leave a small marzipan fold along the bottom edge before you stick it to the first side. Trim opposite side to match size of fold, then crimp edges using fingers and thumb (or, more simply, press with prongs of fork). If you like, mark the 10 slices using the prongs of a fork.",
+                "Assemble second Battenberg and keep in an airtight box or well wrapped in cling film for up to 3 days. Can be frozen for up to a month."
+            ],
+            "mealThumb": "https://www.themealdb.com/images/media/meals/ywwrsp1511720277.jpg",
+            "tags": "Cake,Sweet",
+            "youtube": "https://www.youtube.com/watch?v=aB41Q7kDZQ0",
+            "ingredients": [
+                {
+                    "ingredient": "Butter",
+                    "measure": "175g"
+                },
+                {
+                    "ingredient": "Caster Sugar",
+                    "measure": "175g"
+                },
+                {
+                    "ingredient": "Self-raising Flour",
+                    "measure": "140g"
+                },
+                {
+                    "ingredient": "Almonds",
+                    "measure": "50g"
+                },
+                {
+                    "ingredient": "Baking Powder",
+                    "measure": "\\u00bd tsp"
+                },
+                {
+                    "ingredient": "Eggs",
+                    "measure": "3 Medium"
+                },
+                {
+                    "ingredient": "Vanilla Extract",
+                    "measure": "\\u00bd tsp"
+                },
+                {
+                    "ingredient": "Almond Extract",
+                    "measure": "\\u00bc teaspoon"
+                },
+                {
+                    "ingredient": "Butter",
+                    "measure": "175g"
+                },
+                {
+                    "ingredient": "Caster Sugar",
+                    "measure": "175g"
+                },
+                {
+                    "ingredient": "Self-raising Flour",
+                    "measure": "140g"
+                },
+                {
+                    "ingredient": "Almonds",
+                    "measure": "50g"
+                },
+                {
+                    "ingredient": "Baking Powder",
+                    "measure": "\\u00bd tsp"
+                },
+                {
+                    "ingredient": "Eggs",
+                    "measure": "3 Medium"
+                },
+                {
+                    "ingredient": "Vanilla Extract",
+                    "measure": "\\u00bd tsp"
+                },
+                {
+                    "ingredient": "Almond Extract",
+                    "measure": "\\u00bc teaspoon"
+                },
+                {
+                    "ingredient": "Pink Food Colouring",
+                    "measure": "\\u00bd tsp"
+                },
+                {
+                    "ingredient": "Apricot",
+                    "measure": "200g"
+                },
+                {
+                    "ingredient": "Marzipan",
+                    "measure": "1kg"
+                },
+                {
+                    "ingredient": "Icing Sugar",
+                    "measure": "Dusting"
+                }
+            ],
+            "source": "https://www.bbcgoodfood.com/recipes/1120657/battenberg-cake",
+            "imageSource": null,
+            "creativeCommonsConfirmed": null,
+            "dateModified": null
+        }
+    ],
+    "name": "Hello world"
+}

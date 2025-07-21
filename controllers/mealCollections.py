@@ -1,3 +1,4 @@
+import json
 from flask import Blueprint, render_template, request, jsonify
 from lib.mealCollectionDatabase import MealCollectionDatabase
 from lib.mealDatabase import MealDatabase
@@ -62,14 +63,31 @@ class MealCollectionsController:
             "description": data.get("description", ""),
             "meals": meals
         }
-        # Add to DB (DB assigns id and editDate)
-        collection_id = self.mealCollectionsDatabase.addCollection(collection_data)
-        return jsonify({"message": "Collection created", "collection_id": collection_id})
+        collection_id = data.get("collection_id")
+        if collection_id:
+            # Editing: update existing collection
+            updated = self.mealCollectionsDatabase.updateCollection(collection_id, collection_data)
+            if updated:
+                return jsonify({"message": "Collection updated", "collection_id": collection_id})
+            else:
+                return jsonify({"error": "Collection not found or update failed"}), 404
+        else:
+            # Creating: add new collection
+            new_id = self.mealCollectionsDatabase.addCollection(collection_data)
+            return jsonify({"message": "Collection created", "collection_id": new_id})
 
     def search_meals(self):
         query = request.args.get("query", "")
         results = self.mealDatabase.searchMeals(query)
-        return jsonify(results)
+        # Ensure each result has mealId, meal, mealThumb
+        formatted = []
+        for m in results:
+            formatted.append({
+                "mealId": m.get("mealId") or m.get("idMeal") or m.get("id"),
+                "meal": m.get("meal") or m.get("strMeal"),
+                "mealThumb": m.get("mealThumb") or m.get("strMealThumb")
+            })
+        return jsonify(formatted)
 
     def add_meal_to_collection(self):
         data = request.json
@@ -84,8 +102,19 @@ class MealCollectionsController:
         return jsonify({"error": "Collection not found"}), 404
 
     def get_collection(self, collection_id):
-        collection = self.collections.get(collection_id)
+        # Fetch from persistent DB, not in-memory
+        collection = self.mealCollectionsDatabase.getCollectionById(collection_id)
         if collection:
+            # Replace meals (IDs) with full meal objects
+            meal_ids = collection.get("meals", [])
+            meals = []
+            for meal_id in meal_ids:
+                meal = self.mealDatabase.getMealById(meal_id)
+                if meal:
+                    meals.append(meal)
+            collection = dict(collection)  # Copy to avoid mutating DB
+            collection["meals"] = meals
+            collectionJson = json.dumps(collection, indent=4)  # Format for readability
             return jsonify(collection)
         return jsonify({"error": "Collection not found"}), 404
 

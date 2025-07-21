@@ -6,7 +6,8 @@
             "id": "1",
             "meals": [
                 "52893",
-                "52894"
+                "52894",
+                "52830"
             ],
             "name": "Breakfast"
         },
@@ -15,10 +16,20 @@
             "editDate": "2025-07-19T18:49:49.687831Z",
             "id": "3",
             "meals": [
-                "123",
-                "456"
+                "52893",
+                "52894"
             ],
             "name": "Hello world"
+        },
+        {
+            "description": "A collection of meals for lunch",
+            "editDate": "2025-07-20T19:12:22.912725Z",
+            "id": "4",
+            "meals": [
+                "52940",
+                "52765"
+            ],
+            "name": "Lunch"
         }
     ]
 }
