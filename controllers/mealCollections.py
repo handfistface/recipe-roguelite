@@ -18,6 +18,14 @@ class MealCollectionsController:
         self.blueprint.add_url_rule("/add_meal", "add_meal_to_collection", self.add_meal_to_collection, methods=["POST"])
         self.blueprint.add_url_rule("/get/<collection_id>", "get_collection", self.get_collection)
         self.blueprint.add_url_rule("/create_collection", "create_collection_page", self.create_collection_page, methods=["GET"])
+        self.blueprint.add_url_rule("/delete/<collection_id>", "delete_collection", self.delete_collection, methods=["DELETE"])
+        
+    def delete_collection(self, collection_id):
+        deleted = self.mealCollectionsDatabase.deleteCollection(collection_id)
+        if deleted:
+            return jsonify({"message": "Collection deleted", "collection_id": collection_id})
+        else:
+            return jsonify({"error": "Collection not found"}), 404
 
     def create_collection_page(self):
         return render_template("createCollection.html")

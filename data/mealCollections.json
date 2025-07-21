@@ -7,19 +7,10 @@
             "meals": [
                 "52893",
                 "52894",
-                "52830"
+                "52830",
+                "52803"
             ],
             "name": "Breakfast"
-        },
-        {
-            "description": "My description",
-            "editDate": "2025-07-19T18:49:49.687831Z",
-            "id": "3",
-            "meals": [
-                "52893",
-                "52894"
-            ],
-            "name": "Hello world"
         },
         {
             "description": "A collection of meals for lunch",
@@ -27,9 +18,19 @@
             "id": "4",
             "meals": [
                 "52940",
-                "52765"
+                "52765",
+                "52796"
             ],
             "name": "Lunch"
+        },
+        {
+            "description": "When you've got the munchies",
+            "editDate": "2025-07-21T16:07:25.333678Z",
+            "id": "5",
+            "meals": [
+                "52782"
+            ],
+            "name": "Snicky Snack"
         }
     ]
 }

@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+        {% include "toolbar.html" %}
         <h2 id="formTitle">Create a New Meal Collection</h2>
         <form id="createCollectionForm">
             <div class="form-group">
@@ -19,10 +20,6 @@
             <div class="form-group">
                 <label for="collectionDescription">Description</label>
                 <textarea id="collectionDescription" name="collectionDescription" class="form-control" rows="2"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="collectionMeals">Meals (comma-separated meal IDs)</label>
-                <textarea id="collectionMeals" name="collectionMeals" class="form-control" rows="2" placeholder="e.g. 52893,52894"></textarea>
             </div>
             <button type="submit" id="formCreateBtn" class="btn btn-primary">Create Collection</button>
         </form>
@@ -42,17 +39,17 @@
     </table>
 
     <!-- Modal for searching meals -->
-    <div id="searchModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1000;">
-        <div style="background:#fff; margin:5% auto; padding:20px; width:90%; max-width:600px; border-radius:8px; position:relative;">
-            <button id="closeModalBtn" style="position:absolute; top:10px; right:10px; font-size:20px; background:none; border:none;">&times;</button>
-            <h4>Search Meals</h4>
-            <input type="text" id="searchInput" class="form-control" placeholder="Type meal name..." style="margin-bottom:10px;">
-            <table id="searchResultsTable" class="table">
+    <div id="searchModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(30,32,38,0.85); z-index:1000;">
+        <div style="background:#23272f; margin:5% auto; padding:24px; width:90%; max-width:600px; border-radius:20px; position:relative; box-shadow: 8px 8px 16px #181a1f, -8px -8px 16px #2e323a; color:#e0e0e0;">
+            <button id="closeModalBtn" style="position:absolute; top:16px; right:16px; font-size:24px; background:none; border:none; color:#e0e0e0; cursor:pointer;">&times;</button>
+            <h4 style="color:#e0e0e0; margin-bottom:16px;">Search Meals</h4>
+            <input type="text" id="searchInput" class="form-control" placeholder="Type meal name..." style="margin-bottom:16px; background:#23272f; color:#e0e0e0; border-radius:10px; box-shadow: inset 2px 2px 5px #181a1f, inset -2px -2px 5px #2e323a; border:none; padding:10px;">
+            <table id="searchResultsTable" class="table" style="background:#23272f; color:#e0e0e0; border-radius:10px; box-shadow: 5px 5px 10px #181a1f, -5px -5px 10px #2e323a;">
                 <thead>
                     <tr>
-                        <th>Meal</th>
-                        <th>Image</th>
-                        <th>Add</th>
+                        <th style="background:#2e323a; color:#e0e0e0; border-radius:10px;">Meal</th>
+                        <th style="background:#2e323a; color:#e0e0e0; border-radius:10px;">Image</th>
+                        <th style="background:#2e323a; color:#e0e0e0; border-radius:10px;">Add</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
