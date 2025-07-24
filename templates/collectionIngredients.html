@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collection Ingredients</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        {% include "toolbar.html" %}
+        <div id="undo-container">
+            <button id="undo-button">Undo</button>
+            <ul id="undo-preview"></ul>
+        </div>
+        <h2>Meals in Collection</h2>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% else %}
+            <ul id="meal-names">
+                {% for name in meal_names %}
+                    <li>{{ name }}</li>
+                {% endfor %}
+            </ul>
+            <h3>Summed Ingredients</h3>
+            <table id="ingredients-table">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Total Measure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ing in ingredients %}
+                        <tr>
+                            <td>{{ ing.name }}</td>
+                            <td>{{ ing.total_measure }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+    <script src="/static/js/collectionIngredientsController.js"></script>
+</body>
+</html>
