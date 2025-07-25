@@ -15,8 +15,14 @@ class IndexController:
 
     def index(self):
         # Get pagination parameters from query string
-        page = int(request.args.get("page", 1))
-        per_page = int(request.args.get("per_page", 10))
+        try:
+            page = int(request.args.get("page", 1))
+        except (TypeError, ValueError):
+            page = 1
+        try:
+            per_page = int(request.args.get("per_page", 10))
+        except (TypeError, ValueError):
+            per_page = 10
         start = (page - 1) * per_page
         end = start + per_page
 
