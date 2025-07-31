@@ -1,12 +1,12 @@
 from flask import Blueprint, render_template, request, jsonify
-from lib.mealDatabase import MealDatabase
+from lib.meal_db_singleton import meal_db
 
 
 class MealsController:
     def __init__(self):
         self.blueprint = Blueprint("meals", __name__)
         self.register_routes()
-        self.mealDatabase = MealDatabase()
+        self.mealDatabase = meal_db
 
     def register_routes(self):
         self.blueprint.add_url_rule("/", "meals", self.meals_page)
@@ -48,7 +48,10 @@ class MealsController:
         data = request.json
         from datetime import datetime
         data["dateModified"] = datetime.utcnow().isoformat()
-        self.mealDatabase.updateMeal(data)
+        if data["mealId"] == 'None':
+            self.mealDatabase.createMeal(data)
+        else:
+            self.mealDatabase.updateMeal(data)
         return jsonify({"message": "Meal updated successfully"})
 
     def edit_meal(self, meal_id):

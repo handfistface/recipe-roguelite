@@ -6,17 +6,22 @@
     <title>Recipe Roguelite</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <!-- Font Awesome for pencil and paper icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
         {% include "toolbar.html" %}
+        <div style="text-align:center;padding-top:10px;">
+            <a href="/meals/create" class="primary-btn">&#x2795; Create New Meal</a>
+        </div>
         <input type="text" id="name" placeholder="Search by name" value="{{ filter_name }}" onkeyup="setupTypingTimer()">
         <table border="1">
             {% for meal in meals %}
             <tr>
                 <td><img src="{{ meal['mealThumb'] }}" alt="{{ meal['meal'] }}" width="100"></td>
                 <td>{{ meal['meal'] }}</td>
-                <td><a href="/meals/edit/{{ meal['mealId'] }}">Edit</a></td>
+                <td><a href="/meals/edit/{{ meal['mealId'] }}" title="Edit Meal"><i class="fa-regular fa-pen-to-square"></i> Edit</a></td>
             </tr>
             {% endfor %}
         </table>

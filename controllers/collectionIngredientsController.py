@@ -1,7 +1,7 @@
 import re
 from flask import Blueprint, render_template, request
 from lib.mealCollectionDatabase import MealCollectionDatabase
-from lib.mealDatabase import MealDatabase
+from lib.meal_db_singleton import meal_db
 
 collection_ingredients_bp = Blueprint('collection_ingredients', __name__)
 
@@ -45,7 +45,6 @@ def sum_measurements(measures):
 
 def get_collection_ingredients(collection_id):
     collection_db = MealCollectionDatabase()
-    meal_db = MealDatabase()
     collection = collection_db.getCollectionById(collection_id)
     if not collection:
         return None, None

@@ -3,7 +3,7 @@ import random
 import os
 from datetime import datetime
 from flask import Blueprint, render_template_string, jsonify, request, render_template
-from lib.mealDatabase import MealDatabase
+from lib.meal_db_singleton import meal_db
 from lib.utilities.fileService import FileService
 
 
@@ -12,7 +12,7 @@ class RandomMealsController:
         self.blueprint = Blueprint("randommeals", __name__)
         self.register_routes()
 
-        self.mealDatabase = MealDatabase()
+        self.mealDatabase = meal_db
         self.fileService = FileService()
 
     def register_routes(self):

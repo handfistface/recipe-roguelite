@@ -1,12 +1,12 @@
 from flask import Blueprint, render_template_string, request
-from lib.mealDatabase import MealDatabase
+from lib.meal_db_singleton import meal_db
 from lib.utilities.fileService import FileService
 
 
 class IndexController:
     def __init__(self):
         self.blueprint = Blueprint("index", __name__)
-        self.mealDatabase = MealDatabase()
+        self.mealDatabase = meal_db
         self.fileService = FileService()
         self.register_routes()
 

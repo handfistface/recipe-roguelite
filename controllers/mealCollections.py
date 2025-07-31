@@ -1,13 +1,13 @@
 import json
 from flask import Blueprint, render_template, request, jsonify
 from lib.mealCollectionDatabase import MealCollectionDatabase
-from lib.mealDatabase import MealDatabase
+from lib.meal_db_singleton import meal_db
 
 class MealCollectionsController:
     def __init__(self):
         self.blueprint = Blueprint("mealCollections", __name__)
         self.register_routes()
-        self.mealDatabase = MealDatabase()
+        self.mealDatabase = meal_db
         self.collections = {}  # In-memory store for collections (replace with persistent storage as needed)
         self.mealCollectionsDatabase = MealCollectionDatabase()
 
@@ -19,7 +19,7 @@ class MealCollectionsController:
         self.blueprint.add_url_rule("/get/<collection_id>", "get_collection", self.get_collection)
         self.blueprint.add_url_rule("/create_collection", "create_collection_page", self.create_collection_page, methods=["GET"])
         self.blueprint.add_url_rule("/delete/<collection_id>", "delete_collection", self.delete_collection, methods=["DELETE"])
-        
+
     def delete_collection(self, collection_id):
         deleted = self.mealCollectionsDatabase.deleteCollection(collection_id)
         if deleted:
