@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <td>${meal.meal || meal.strMeal}</td>
                         <td><img src="${meal.mealThumb || meal.strMealThumb}" alt="${meal.meal || meal.strMeal}" style="width:60px; height:auto;"></td>
                         <td><button class="addMealBtn" data-mealid="${meal.mealId || meal.idMeal || meal.id}" data-mealname="${meal.meal || meal.strMeal}" data-mealthumb="${meal.mealThumb || meal.strMealThumb}" style="background:none; border:none; color:green; font-size:20px; cursor:pointer;" title="Add"><span>+</span></button></td>
+                        <td><button class="viewMealBtn" data-mealid="${meal.mealId || meal.idMeal || meal.id}" style="background:none; border:none; color:#007bff; font-size:20px; cursor:pointer;" title="View"><span>&#128065;</span></button></td>
                     `;
                     tbody.appendChild(tr);
                 });
@@ -109,9 +110,85 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!window.currentMeals.some(m => m.mealId === mealId)) {
                 window.currentMeals.push({ mealId, meal: mealName, mealThumb });
                 renderMealsTable();
-                document.getElementById('collectionMeals').value = window.currentMeals.map(m => m.mealId).join(',');
+                // Ensure the hidden input exists
+                let collectionMealsInput = document.getElementById('collectionMeals');
+                if (!collectionMealsInput) {
+                    collectionMealsInput = document.createElement('input');
+                    collectionMealsInput.type = 'hidden';
+                    collectionMealsInput.id = 'collectionMeals';
+                    collectionMealsInput.name = 'collectionMeals';
+                    document.getElementById('createCollectionForm').appendChild(collectionMealsInput);
+                }
+                collectionMealsInput.value = window.currentMeals.map(m => m.mealId).join(',');
+                // Close modal
+                document.getElementById('searchModal').style.display = 'none';
+                // Show floating message after modal is closed
+                setTimeout(() => {
+                    let msg = document.createElement('div');
+                    msg.textContent = 'successfully added';
+                    msg.style.position = 'fixed';
+                    msg.style.top = '50%';
+                    msg.style.left = '50%';
+                    msg.style.transform = 'translate(-50%, -50%)';
+                    msg.style.background = '#28a745';
+                    msg.style.color = '#fff';
+                    msg.style.padding = '18px 40px';
+                    msg.style.borderRadius = '16px';
+                    msg.style.fontSize = '24px';
+                    msg.style.zIndex = '3000';
+                    msg.style.boxShadow = '0 4px 24px rgba(40,167,69,0.25)';
+                    msg.style.pointerEvents = 'none';
+                    msg.style.fontWeight = 'bold';
+                    msg.style.textAlign = 'center';
+                    document.body.appendChild(msg);
+                    setTimeout(() => { msg.remove(); }, 2000);
+                }, 50);
             }
         }
+    if (e.target.closest('.viewMealBtn')) {
+        const btn = e.target.closest('.viewMealBtn');
+        const mealId = btn.dataset.mealid;
+        const tr = btn.closest('tr');
+        // Check if info row is already open for this meal
+        const nextRow = tr.nextSibling;
+        if (nextRow && nextRow.classList && nextRow.classList.contains('mealInfoRow') && nextRow.dataset.mealid === mealId) {
+            // Collapse (remove) the info row
+            nextRow.remove();
+            return;
+        } else {
+            // Remove any other info rows
+            document.querySelectorAll('.mealInfoRow').forEach(row => row.remove());
+            // Fetch ingredients and instructions
+            Promise.all([
+                fetch(`/meals/ingredients/${mealId}`).then(r => r.json()),
+                fetch(`/meals/instructions/${mealId}`).then(r => r.json())
+            ]).then(([ingredientsRes, instructionsRes]) => {
+                const ingredients = ingredientsRes.ingredients || [];
+                const instructions = instructionsRes.instructions || [];
+                // Format instructions as numbered list
+                const instructionsHtml = instructions.length
+                    ? `<ol style='margin-left:20px;'>${instructions.map(i => `<li>${i}</li>`).join('')}</ol>`
+                    : '<em>No instructions found.</em>';
+                // Format ingredients as comma-separated
+                const ingredientsHtml = ingredients.length
+                    ? `<span>${ingredients.join(', ')}</span>`
+                    : '<em>No ingredients found.</em>';
+                // Create info row
+                const infoRow = document.createElement('tr');
+                infoRow.className = 'mealInfoRow';
+                infoRow.dataset.mealid = mealId;
+                infoRow.innerHTML = `<td colspan='4' style='background:#23272f; color:#e0e0e0; border-radius:10px; padding:16px 24px;'>
+                    <strong>Ingredients:</strong> ${ingredientsHtml}<br><br>
+                    <strong>Instructions:</strong> ${instructionsHtml}
+                </td>`;
+                // Insert after current row
+                tr.parentNode.insertBefore(infoRow, tr.nextSibling);
+            });
+        }
+    }
+    if (e.target.classList.contains('closeInfoBtn')) {
+        e.target.closest('tr').remove();
+    }
     });
 
     function handleSaveOrCreate(isEdit) {

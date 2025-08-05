@@ -8,6 +8,14 @@ class MealsController:
         self.register_routes()
         self.mealDatabase = meal_db
 
+    def get_meal_ingredients(self, meal_id):
+        ingredients = self.mealDatabase.getMealIngredients(meal_id)
+        return jsonify({"ingredients": ingredients})
+
+    def get_meal_instructions(self, meal_id):
+        instructions = self.mealDatabase.getMealInstructions(meal_id)
+        return jsonify({"instructions": instructions})
+
     def register_routes(self):
         self.blueprint.add_url_rule("/", "meals", self.meals_page)
         self.blueprint.add_url_rule("/create", "create_meal", self.create_meal, methods=["GET"])
@@ -17,6 +25,8 @@ class MealsController:
         )
         self.blueprint.add_url_rule("/edit/<meal_id>", "edit_meal", self.edit_meal)
         self.blueprint.add_url_rule("/get/<meal_id>", "get_meal", self.get_meal)
+        self.blueprint.add_url_rule("/ingredients/<meal_id>", "get_meal_ingredients", self.get_meal_ingredients)
+        self.blueprint.add_url_rule("/instructions/<meal_id>", "get_meal_instructions", self.get_meal_instructions)
 
     def meals_page(self):
         # Optionally, redirect to create page or show a list
