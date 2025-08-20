@@ -1,0 +1,5 @@
+I am converting my collection.json file into a database instead of a json file. It is an array of meal.json. I'd like the database object to be flat. There are a few problematic fields like ingredients and instructions which are json arrays. I'd like to keep the json array format and just store it as a text field in the database. Please write a python script which ingests the collection.json file, creates a database table reflecting the structure of the data, and then inserts all of the data into that table. 
+
+You will be using a localhost mySql connection on port 3306. The root password for your connectoin is carbunkle9-efficient. The database you will connect to is called recipe-roguelite.
+
+Place the python script in a new directory called scripts. Title the python script json-collection-migrator.py.
