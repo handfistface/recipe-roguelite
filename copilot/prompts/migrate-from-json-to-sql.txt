@@ -3,3 +3,7 @@ I am converting my collection.json file into a database instead of a json file. 
 You will be using a localhost mySql connection on port 3306. The root password for your connectoin is carbunkle9-efficient. The database you will connect to is called recipe-roguelite.
 
 Place the python script in a new directory called scripts. Title the python script json-collection-migrator.py.
+
+***********************************************
+
+I would now like to convert the mealDatabase.py over to use the new mySql database I am leveraging in the json-collection-migrator. Please rewrite this MealDatabase class to use the mySql connection. I would like the database connection information in its own local file that isn't tracked by git. This way I don't upload it to version control and expose my password and connection information. Load this file at runtime and use its information to connect to the database.
